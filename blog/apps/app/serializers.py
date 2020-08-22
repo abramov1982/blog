@@ -3,6 +3,12 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['cat_name']
+
+
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
