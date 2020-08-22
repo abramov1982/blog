@@ -17,6 +17,7 @@ class AuthorSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     author = AuthorSerializer(required=False)
+    category = CategorySerializer(required=False)
 
     class Meta:
         model = Post
